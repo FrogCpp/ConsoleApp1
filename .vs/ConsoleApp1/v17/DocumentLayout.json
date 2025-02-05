@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|c:\\users\\aleks\\saved games\\c\u002B\u002Bc#projects\\consoleapp1\\codefile1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|solutionrelative:codefile1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|c:\\users\\aleks\\saved games\\c\u002B\u002Bc#projects\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CodeFile1.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\CodeFile1.cs",
+              "RelativeDocumentMoniker": "CodeFile1.cs",
+              "ToolTip": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\CodeFile1.cs",
+              "RelativeToolTip": "CodeFile1.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T16:51:21.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T15:19:58.668Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
