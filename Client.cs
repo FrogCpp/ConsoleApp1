@@ -11,14 +11,29 @@ namespace CharTest_csharp
         public void Client()
         {
             WriteLine("Client");
+            WriteLine("Start");
             Socket ServerSocket = new Socket(AddressFamily.InterNetwork,
                                              SocketType.Stream,
                                              ProtocolType.Tcp);
 
+            bool Conn = false;
+            while (!Conn)
+            {
+                try
+                {
+                    ServerSocket.Connect(IPAddress.Parse("127.0.0.1"), 20000);
+                    Conn = true;
+                }
+                catch (Exception e) 
+                {
+                    Conn = false;
+                }
+                finally
+                {
+                    if (Conn) { WriteLine("aa"); }
+                }
+            }
 
-            ServerSocket.Connect(IPAddress.Parse("127.0.0.1"), 20000);
-
-            WriteLine("Start");
             string Message = "None";
             do
             {

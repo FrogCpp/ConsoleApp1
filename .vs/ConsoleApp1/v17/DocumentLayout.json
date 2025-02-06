@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|c:\\users\\aleks\\saved games\\c\u002B\u002Bc#projects\\consoleapp1\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|solutionrelative:server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|c:\\users\\aleks\\saved games\\c\u002B\u002Bc#projects\\consoleapp1\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|solutionrelative:client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|c:\\users\\aleks\\saved games\\c\u002B\u002Bc#projects\\consoleapp1\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|solutionrelative:server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|c:\\users\\aleks\\saved games\\c\u002B\u002Bc#projects\\consoleapp1\\mainprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -39,26 +39,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Client.cs",
               "DocumentMoniker": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\Client.cs",
               "RelativeDocumentMoniker": "Client.cs",
-              "ToolTip": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\Client.cs",
-              "RelativeToolTip": "Client.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAwwAkAAAAFAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\Client.cs*",
+              "RelativeToolTip": "Client.cs*",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAIwBsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-05T16:51:21.948Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Server.cs",
               "DocumentMoniker": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\Server.cs",
               "RelativeDocumentMoniker": "Server.cs",
               "ToolTip": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\Server.cs",
               "RelativeToolTip": "Server.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAQwDwAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-05T15:19:58.668Z",
               "EditorCaption": ""

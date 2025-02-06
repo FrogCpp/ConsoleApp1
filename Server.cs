@@ -21,7 +21,6 @@ namespace CharTest_csharp
             var a = IPAddress.Any;
             listenSocket.Bind(new IPEndPoint(a, 20000));
 
-            //start listening
             listenSocket.Listen();
 
             WriteLine("Start");
