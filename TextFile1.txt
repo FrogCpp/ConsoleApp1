@@ -1,0 +1,27 @@
+﻿byte[] requestBytes = Encoding.ASCII.GetBytes(@$"Hello World!");
+
+int bytesSent = 0;
+bytesSent += ServSocket.Send(requestBytes, bytesSent, requestBytes.Length - bytesSent, SocketFlags.None);
+
+byte[] buffer = new byte[1024];
+int Br = ServSocket.Receive(buffer);
+WriteLine(Encoding.ASCII.GetString(buffer, 0, Br));
+Read();
+
+
+
+
+var ls = listenSocket.Accept();
+
+
+byte[] buffer = new byte[1024];
+int Br = ls.Receive(buffer);
+WriteLine(Encoding.ASCII.GetString(buffer, 0, Br));
+
+byte[] requestBytes = Encoding.ASCII.GetBytes(@$"Complite");
+
+int bytesSent = 0;
+bytesSent += ls.Send(requestBytes, bytesSent, requestBytes.Length - bytesSent, SocketFlags.None);
+Read();
+ls.Close();
+listenSocket.Close();
