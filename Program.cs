@@ -22,7 +22,7 @@ namespace CharTest_csharp
 
                 var a = IPAddress.Any;
                 Write(a);
-                listenSocket.Bind(new IPEndPoint(a, 4001));
+                listenSocket.Bind(new IPEndPoint(a, 20000));
 
                 //start listening
                 listenSocket.Listen();

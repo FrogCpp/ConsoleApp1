@@ -15,7 +15,7 @@ namespace CharTest_csharp
                                              ProtocolType.Tcp);
 
 
-            senderSocket.Connect(IPAddress.Any, 4001);
+            senderSocket.Connect(IPAddress.Any, 20000);
 
             Write("Client");
 
