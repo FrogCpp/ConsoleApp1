@@ -14,6 +14,7 @@ namespace CharTest_csharp
         public void Server()
         {
             WriteLine("Server");
+            StartBroadcast();
             Socket listenSocket = new Socket(AddressFamily.InterNetwork,
                                                 SocketType.Stream,
                                                 ProtocolType.Tcp);
@@ -59,6 +60,14 @@ namespace CharTest_csharp
                 ClientSocket.Close();
                 Clients.TryRemove(name, out _);
             }
+        }
+
+        private static void StartBroadcast()
+        {
+            UdpClient udpServ = new UdpClient();
+
+            byte[] data = Encoding.ASCII.GetBytes("ServerHere");
+            udpServ.Send(data, data.Length, new IPEndPoint(IPAddress.Broadcast, 20000));
         }
     }
 }

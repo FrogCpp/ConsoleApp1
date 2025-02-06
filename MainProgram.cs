@@ -10,16 +10,28 @@ namespace CharTest_csharp
     {
         static void Main(string[] args)
         {
-            string rg = ReadLine();
-            if (rg == "C")
+            try
             {
-                var a = new ClientProgram();
-                a.Client();
+                string rg = ReadLine();
+                if (rg == "C")
+                {
+                    var a = new ClientProgram();
+                    a.Client();
+                }
+                else if (rg == "S")
+                {
+                    var a = new ServerProgram();
+                    a.Server();
+                }
             }
-            else if (rg == "S")
+            catch (Exception ex)
             {
-                var a = new ServerProgram();
-                a.Server();
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                Console.WriteLine("it`s end");
+                Read();
             }
         }
     }

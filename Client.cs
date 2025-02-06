@@ -11,6 +11,7 @@ namespace CharTest_csharp
         public void Client()
         {
             WriteLine("Client");
+            GetServerIp();
             WriteLine("Start");
             Socket ServerSocket = new Socket(AddressFamily.InterNetwork,
                                              SocketType.Stream,
@@ -42,6 +43,26 @@ namespace CharTest_csharp
                 ServerSocket.Send(requestBytes);
             } while (Message != "END");
             ServerSocket.Close();
+        }
+
+        private static string GetServerIp()
+        {
+            string message = "None";
+            IPEndPoint remoteEndPoint = null;
+            UdpClient udpClient = new UdpClient();
+            udpClient.Client.SetSocketOption(
+                SocketOptionLevel.Socket,
+                SocketOptionName.ReuseAddress,
+                true
+            );
+            udpClient.Client.Bind(new IPEndPoint(IPAddress.Any, 20000));
+            while (message != "ServerHere")
+            {
+                byte[] data = udpClient.Receive(ref remoteEndPoint);
+                message = Encoding.ASCII.GetString(data);
+            }
+            WriteLine(remoteEndPoint.Address.ToString());
+            return remoteEndPoint.Address.ToString();
         }
     }
 }
