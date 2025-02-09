@@ -28,11 +28,6 @@ namespace CharTest_csharp
             {
                 Console.WriteLine(ex.ToString());
             }
-            finally
-            {
-                Console.WriteLine("it`s end");
-                Read();
-            }
         }
     }
 }

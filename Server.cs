@@ -13,55 +13,38 @@ namespace CharTest_csharp
         private static ConcurrentDictionary<Guid, Socket> Clients = new ConcurrentDictionary<Guid, Socket> ();
         public void Server()
         {
-            WriteLine("Server");
+            Thread AddClients = new Thread(() => ServerProgram.AddClients());
+            AddClients.Start();
+
+            Thread ControllClients = new Thread(() => ServerProgram.ControllClients());
+            ControllClients.Start();
+        }
+        private static void AddClients()
+        {
             StartBroadcast();
-            Socket listenSocket = new Socket(AddressFamily.InterNetwork,
-                                                SocketType.Stream,
-                                                ProtocolType.Tcp);
-
-            var a = IPAddress.Any;
-            listenSocket.Bind(new IPEndPoint(a, 20000));
-
+            Socket listenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            listenSocket.Bind(new IPEndPoint(IPAddress.Any, 20000));
             listenSocket.Listen();
-
-            WriteLine("Start");
-
             while (true)
             {
                 Socket newClient = listenSocket.Accept();
                 Guid name = Guid.NewGuid();
-
                 Clients.TryAdd(name, newClient);
-
-
-                Thread clientThread = new Thread(() => WorkWithClient(name, newClient));
-                clientThread.Start();
             }
         }
-
-        private static void WorkWithClient(Guid name, Socket ClientSocket)
+        private static void ControllClients()
         {
-            try
+            string controllMessages = "";
+            while (controllMessages != "END")
             {
-                byte[] buffer = new byte[1024];
-                int Br = 0;
-                while (Encoding.ASCII.GetString(buffer, 0, Br) != "END")
+                controllMessages = ReadLine();
+                foreach (var sct in Clients.Values)
                 {
-                    Br = ClientSocket.Receive(buffer);
-                    Write(Encoding.ASCII.GetString(buffer, 0, Br) + '\n');
+                    byte[] requestBytes = Encoding.ASCII.GetBytes(controllMessages);
+                    sct.Send(requestBytes);
                 }
             }
-            catch (Exception ex)
-            {
-                WriteLine(ex.ToString());
-            }
-            finally
-            {
-                ClientSocket.Close();
-                Clients.TryRemove(name, out _);
-            }
         }
-
         private static void StartBroadcast()
         {
             UdpClient udpServ = new UdpClient();

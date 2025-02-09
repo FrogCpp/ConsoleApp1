@@ -10,39 +10,24 @@ namespace CharTest_csharp
     {
         public void Client()
         {
-            WriteLine("Client");
-            GetServerIp();
-            WriteLine("Start");
-            Socket ServerSocket = new Socket(AddressFamily.InterNetwork,
-                                             SocketType.Stream,
-                                             ProtocolType.Tcp);
-
-            bool Conn = false;
-            while (!Conn)
+            bool isOn = true;
+            while (isOn)
             {
-                try
+                bool Conn = false;
+                Socket ServerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                string myIp = GetServerIp();
+                ServerSocket.Connect(IPAddress.Parse(myIp), 20000);
+                string Message = "";
+                int Br = 0;
+                byte[] buffer = new byte[1024];
+                while (Message != "END")
                 {
-                    ServerSocket.Connect(IPAddress.Parse("127.0.0.1"), 20000);
-                    Conn = true;
+                    Br = ServerSocket.Receive(buffer);
+                    Message = Encoding.ASCII.GetString(buffer, 0, Br);
+                    WriteLine(Message);
                 }
-                catch (Exception e) 
-                {
-                    Conn = false;
-                }
-                finally
-                {
-                    if (Conn) { WriteLine("aa"); }
-                }
+                ServerSocket.Close();
             }
-
-            string Message = "None";
-            do
-            {
-                Message = ReadLine();
-                byte[] requestBytes = Encoding.ASCII.GetBytes(Message);
-                ServerSocket.Send(requestBytes);
-            } while (Message != "END");
-            ServerSocket.Close();
         }
 
         private static string GetServerIp()
