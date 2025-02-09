@@ -3,6 +3,9 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using static System.Console;
+using static System.Net.Mime.MediaTypeNames;
+using System.Windows;
+
 
 namespace CharTest_csharp
 {
@@ -24,7 +27,8 @@ namespace CharTest_csharp
                 {
                     Br = ServerSocket.Receive(buffer);
                     Message = Encoding.ASCII.GetString(buffer, 0, Br);
-                    WriteLine(Message);
+                    isOn = ExecuteCommand(Message);
+                    if (!isOn) { break; }
                 }
                 ServerSocket.Close();
             }
@@ -46,8 +50,20 @@ namespace CharTest_csharp
                 byte[] data = udpClient.Receive(ref remoteEndPoint);
                 message = Encoding.ASCII.GetString(data);
             }
-            WriteLine(remoteEndPoint.Address.ToString());
             return remoteEndPoint.Address.ToString();
+        }
+
+        private static bool ExecuteCommand(string command)
+        {
+            if (command == "Off")
+            {
+                return false;
+            }
+            else
+            {
+                WriteLine(command);
+            }
+            return true;
         }
     }
 }
