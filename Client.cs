@@ -5,6 +5,7 @@ using System.Text;
 using static System.Console;
 using static System.Net.Mime.MediaTypeNames;
 using System.Windows;
+using ConsoleApp1.Client;
 
 
 namespace CharTest_csharp
@@ -27,8 +28,8 @@ namespace CharTest_csharp
                 {
                     Br = ServerSocket.Receive(buffer);
                     Message = Encoding.ASCII.GetString(buffer, 0, Br);
-                    isOn = ExecuteCommand(Message);
-                    if (!isOn) { break; }
+                    byte[] ans = ExecuteCommand(Message);
+                    if (ans.Length == 0) { isOn = false; break; }
                 }
                 ServerSocket.Close();
             }
@@ -53,17 +54,21 @@ namespace CharTest_csharp
             return remoteEndPoint.Address.ToString();
         }
 
-        private static bool ExecuteCommand(string command)
+        private static byte[] ExecuteCommand(string command)
         {
             if (command == "Off")
             {
-                return false;
+                return new byte[0];
+            }
+            else if (command == "takeScreen")
+            {
+                return Screenshot.TakeScreenshot();
             }
             else
             {
                 WriteLine(command);
             }
-            return true;
+            return new byte[1];
         }
     }
 }

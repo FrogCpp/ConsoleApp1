@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "NEnsNpQew00=",
+  "dgSpecHash": "9AqTgzp9KrI=",
   "success": true,
   "projectFilePath": "C:\\Users\\aleks\\Saved Games\\C++C#Projects\\ConsoleApp1\\ConsoleApp1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\aleks\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.1\\microsoft.win32.systemevents.9.0.1.nupkg.sha512",
+    "C:\\Users\\aleks\\.nuget\\packages\\system.drawing.common\\9.0.1\\system.drawing.common.9.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
