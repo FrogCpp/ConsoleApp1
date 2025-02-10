@@ -25,15 +25,16 @@ namespace ConsoleApp1.Client
                     graphics.CopyFromScreen(0, 0, 0, 0, new Size(width, height));
                 }
 
-                return ToByteArray(bitmap, format);
+                return ConvertBitmapToBytes(bitmap, format);
             }
         }
 
-        private static byte[] ToByteArray(Image image, ImageFormat format)
+        public static byte[] ConvertBitmapToBytes(Bitmap bitmap, ImageFormat format)
         {
+
             using (MemoryStream ms = new MemoryStream())
             {
-                image.Save(ms, format);
+                bitmap.Save(ms, format);
                 return ms.ToArray();
             }
         }

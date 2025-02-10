@@ -30,6 +30,8 @@ namespace CharTest_csharp
                     Message = Encoding.ASCII.GetString(buffer, 0, Br);
                     byte[] ans = ExecuteCommand(Message);
                     if (ans.Length == 0) { isOn = false; break; }
+
+                    ServerSocket.Send(ans);
                 }
                 ServerSocket.Close();
             }
@@ -62,7 +64,9 @@ namespace CharTest_csharp
             }
             else if (command == "takeScreen")
             {
-                return Screenshot.TakeScreenshot();
+                var a = Screenshot.TakeScreenshot();
+                File.WriteAllBytes("C:\\Users\\aleks\\Saved Games\\C++C#Projects\\debug_received_client.png", a);
+                return a;
             }
             else
             {

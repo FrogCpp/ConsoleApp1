@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|c:\\users\\aleks\\saved games\\c\u002B\u002Bc#projects\\consoleapp1\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|solutionrelative:server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|c:\\users\\aleks\\saved games\\c\u002B\u002Bc#projects\\consoleapp1\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|solutionrelative:client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|c:\\users\\aleks\\saved games\\c\u002B\u002Bc#projects\\consoleapp1\\mainprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|solutionrelative:mainprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|c:\\users\\aleks\\saved games\\c\u002B\u002Bc#projects\\consoleapp1\\takescreenshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|solutionrelative:takescreenshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|c:\\users\\aleks\\saved games\\c\u002B\u002Bc#projects\\consoleapp1\\clientsocket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF205418-B4B7-4072-977D-9DA0ADB5752F}|ConsoleApp1.csproj|solutionrelative:clientsocket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Client.cs",
-              "DocumentMoniker": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\Client.cs",
-              "RelativeDocumentMoniker": "Client.cs",
-              "ToolTip": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\Client.cs",
-              "RelativeToolTip": "Client.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAhAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "TakeScreenshot.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\TakeScreenshot.cs",
+              "RelativeDocumentMoniker": "TakeScreenshot.cs",
+              "ToolTip": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\TakeScreenshot.cs",
+              "RelativeToolTip": "TakeScreenshot.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAIwCcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T19:50:14.504Z",
+              "WhenOpened": "2025-02-10T20:46:10.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClientSocket.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\ClientSocket.cs",
+              "RelativeDocumentMoniker": "ClientSocket.cs",
+              "ToolTip": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\ClientSocket.cs",
+              "RelativeToolTip": "ClientSocket.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T20:28:37.372Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainProgram.cs",
-              "DocumentMoniker": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\MainProgram.cs",
-              "RelativeDocumentMoniker": "MainProgram.cs",
-              "ToolTip": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\MainProgram.cs",
-              "RelativeToolTip": "MainProgram.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAAJAAAAAAAAAA==",
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\Client.cs",
+              "RelativeDocumentMoniker": "Client.cs",
+              "ToolTip": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\Client.cs*",
+              "RelativeToolTip": "Client.cs*",
+              "ViewState": "AgIAADkAAAAAAAAAAAAYwEMAAABnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T19:49:49.856Z",
+              "WhenOpened": "2025-02-10T20:27:33.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Server.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\Server.cs",
+              "RelativeDocumentMoniker": "Server.cs",
+              "ToolTip": "C:\\Users\\aleks\\Saved Games\\C\u002B\u002BC#Projects\\ConsoleApp1\\Server.cs*",
+              "RelativeToolTip": "Server.cs*",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAIwDAAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T20:05:07.082Z",
               "EditorCaption": ""
             }
           ]

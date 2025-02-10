@@ -1,5 +1,9 @@
-﻿using System;
+﻿using ConsoleApp1;
+using ConsoleApp1.Client;
+using System;
+using System.Collections;
 using System.Collections.Concurrent;
+using System.Drawing;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -10,7 +14,7 @@ namespace CharTest_csharp
 {
     internal class ServerProgram
     {
-        private static ConcurrentDictionary<Guid, Socket> Clients = new ConcurrentDictionary<Guid, Socket> ();
+        private static List<ClientSocket> Clients = new List<ClientSocket>(100);
         public void Server()
         {
             Thread AddClients = new Thread(() => ServerProgram.AddClients());
@@ -28,8 +32,7 @@ namespace CharTest_csharp
             while (true)
             {
                 Socket newClient = listenSocket.Accept();
-                Guid name = Guid.NewGuid();
-                Clients.TryAdd(name, newClient);
+                Clients.Add(new ClientSocket(Clients.Count.ToString(), newClient, ""));
             }
         }
         private static void ControllClients()
@@ -38,10 +41,13 @@ namespace CharTest_csharp
             while (controllMessages != "END")
             {
                 controllMessages = ReadLine();
-                foreach (var sct in Clients.Values)
+                foreach (var sct in Clients)
                 {
-                    byte[] requestBytes = Encoding.ASCII.GetBytes(controllMessages);
-                    sct.Send(requestBytes);
+                    var a = sct.Order(controllMessages);
+                    if (controllMessages == "takeScreen")
+                    {
+                        File.WriteAllBytes("C:\\Users\\aleks\\Saved Games\\C++C#Projects\\debug_received_server.png", a);
+                    }
                 }
             }
         }
