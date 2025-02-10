@@ -65,7 +65,7 @@ namespace CharTest_csharp
             else if (command == "takeScreen")
             {
                 var a = Screenshot.TakeScreenshot();
-                File.WriteAllBytes("C:\\Users\\aleks\\Saved Games\\C++C#Projects\\debug_received_client.png", a);
+                //File.WriteAllBytes("C:\\Users\\aleks\\Saved Games\\C++C#Projects\\debug_received_client.png", a);
                 return a;
             }
             else
